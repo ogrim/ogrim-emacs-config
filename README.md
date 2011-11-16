@@ -1,8 +1,6 @@
 
-## Live Coding Emacs setup for Overtone
-My .emacs was long overdue for a cleanup,
-
-I am amazed with the modularity and cleanliness of the live-coding-emacs, and decided to fix up my own config.
+## My .emacs config
+My .emacs was long overdue for a cleanup. As I am amazed with the modularity and cleanliness of the live-coding-emacs, and decided to merge my own config with the overtone/live-coding-emacs.
 
 Also, check out the original: https://github.com/overtone/live-coding-emacs
 
@@ -23,7 +21,6 @@ This config includes an exciting cornucopia of Emacs goodies set up and ready to
 * Slime (for communicating with swank servers)
 * Auto completion (configured to work with slime for inline auto completion of documentation)
 * Tailor-made colour theme
-* Rainbow parens and delimiters (to allow you to easily navigate a sea of parens)
 * The amazing undo-tree (live-code with confidence!)
 * Textmate-like snippets
 * Fancy highlighting of sexps on eval
