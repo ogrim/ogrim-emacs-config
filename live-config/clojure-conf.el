@@ -1,7 +1,5 @@
 (add-live-lib-path "clojure-mode")
 (require 'clojure-mode)
-(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'clojure-mode-hook 'rainbow-paren-mode)
 
 (eval-after-load 'clojure-mode
   '(font-lock-add-keywords

@@ -22,8 +22,6 @@
 (add-to-list 'load-path dotfiles-lib-dir)
 (require 'dircolors)
 (require 'smooth-scrolling)
-(require 'rainbow-parens)
-(require 'rainbow-delimiters)
 (require 'mwe-log-commands)
 
 (load-live-config-file "util-fns.el")

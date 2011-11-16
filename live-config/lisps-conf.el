@@ -5,6 +5,4 @@
 
 (dolist (x '(scheme emacs-lisp lisp clojure))
   (add-hook
-   (intern (concat (symbol-name x) "-mode-hook")) 'turn-on-paredit)
-  (add-hook
-   (intern (concat (symbol-name x) "-mode-hook")) 'rainbow-paren-mode))
+   (intern (concat (symbol-name x) "-mode-hook")) 'turn-on-paredit))
