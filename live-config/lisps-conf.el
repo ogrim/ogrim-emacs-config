@@ -6,3 +6,7 @@
 (dolist (x '(scheme emacs-lisp lisp clojure))
   (add-hook
    (intern (concat (symbol-name x) "-mode-hook")) 'turn-on-paredit))
+
+(dolist (x '(scheme emacs-lisp lisp clojure))
+  (add-hook
+   (intern (concat (symbol-name x) "-mode-hook")) 'turn-on-linum))

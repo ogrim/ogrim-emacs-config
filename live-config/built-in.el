@@ -43,7 +43,9 @@
       uniquify-buffer-name-style 'forward
       ediff-window-setup-function 'ediff-setup-windows-plain
       xterm-mouse-mode t
-      save-place-file (concat dotfiles-tmp-dir "places"))
+      save-place-file (concat dotfiles-tmp-dir "places")
+      display-time-day-and-date t
+      display-time-24hr-format t)
 
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -61,6 +63,11 @@
 (random t) ;; Seed the random-number generator
 
 (setq diff-switches "-u")
+
+(mouse-avoidance-mode 'cat-and-mouse)
+
+(display-time)
+
 
 (when (eq system-type 'darwin)
   ;; Work around a bug on OS X where system-name is FQDN
