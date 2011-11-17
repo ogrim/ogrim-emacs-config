@@ -5,13 +5,11 @@ I don't care about the live coding stuff in the original repo, so you can check 
 
 ### Getting started
 
-1a. Download the source and move and rename the `live-coding-emacs` folder to `~/.emacs.d`
-xor
-1b. Download the source and just symlink to it with 'ln -s /path/to/ogrim-emacs-config/ ~/.emacs.d'
-
-2. Launch Emacs
-3. you shuld run emacs with 'emacs --daemon'
-4. and open a frame with 'emacsclient -c'
+1. In order to start using this config, you can to one of two things:
+   * Download the source and move and rename the `live-coding-emacs` folder to `~/.emacs.d`
+   * Download the source and just symlink to it with 'ln -s /path/to/ogrim-emacs-config/ ~/.emacs.d'
+2. you shuld run emacs with 'emacs --daemon'
+3. and open a frame with 'emacsclient -c'
 
 It is fast and awesome!
 
@@ -23,4 +21,5 @@ This config includes an exciting cornucopia of Emacs goodies set up and ready to
 * Slime (for communicating with swank servers)
 * Auto completion (configured to work with slime for inline auto completion of documentation)
 * Fancy highlighting of sexps on eval
+* Zenburn
 * REPL syntax highlighting
