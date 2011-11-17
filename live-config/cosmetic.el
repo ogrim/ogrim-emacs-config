@@ -7,12 +7,15 @@
 ;;(load-file (concat dotfiles-lib-dir "blackbored.el"))
 ;;(color-theme-blackbored)
 
+(load-file (concat dotfiles-lib-dir "zenburn-el/color-theme-zenburn.el"))
+(color-theme-zenburn)
+
 ;;highlight current line
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#333333")
 
 ;;set cursor colour
-(set-cursor-color "yellow")
+;(set-cursor-color "yellow")
 
 ;;make sure ansi colour character escapes are honoured
 (ansi-color-for-comint-mode-on)

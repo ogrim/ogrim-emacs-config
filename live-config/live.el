@@ -37,4 +37,3 @@
 (load-live-config-file "durendal-conf.el")
 (load-live-config-file "smex-conf.el")
 (load-live-config-file "yasnippet-conf.el")
-(load-live-config-file "undo-tree-conf.el")

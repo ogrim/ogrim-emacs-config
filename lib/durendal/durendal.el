@@ -297,8 +297,6 @@ Terrible hack workaround for the fact that elisp lacks fscking closures.")
                                                    nil))))))
 
                     (add-hook 'slime-repl-mode-hook 'durendal-slime-repl-paredit)
-                    (add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
-                    (add-hook 'slime-repl-mode-hook 'rainbow-paren-mode)
                     (add-hook 'sldb-mode-hook 'durendal-dim-sldb-font-lock)
                     (durendal-enable-slime-repl-font-lock))
                 (progn
