@@ -20,3 +20,5 @@
 	     (local-set-key (kbd "<C-f7>") 'flyspell-buffer)))
 
 (global-set-key (kbd "<f9>") 'gtd)
+
+(global-set-key (kbd "C-x O") 'previous-multiframe-window)
