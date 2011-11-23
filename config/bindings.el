@@ -11,6 +11,8 @@
 (global-set-key (kbd "<C-f8>") 'org-todo-list)
 
 (global-set-key "\C-c\C-w" 'comment-or-uncomment-region)
+(global-set-key "\C-c w" 'comment-or-uncomment-region)
+
 (global-set-key "\M-i" 'shrink-window)
 (global-set-key (kbd "M-I") 'enlarge-window-horizontally)
 
