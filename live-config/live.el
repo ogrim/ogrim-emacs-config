@@ -28,7 +28,6 @@
 (load-live-config-file "built-in.el")
 (load-live-config-file "paredit-conf.el")
 (load-live-config-file "lisps-conf.el")
-(load-live-config-file "cosmetic.el")
 (load-live-config-file "highlight-flash-conf.el")
 (load-live-config-file "ido-conf.el")
 (load-live-config-file "clojure-conf.el")
@@ -39,3 +38,6 @@
 (load-live-config-file "yasnippet-conf.el")
 (load-live-config-file "orgmode-conf.el")
 (load-live-config-file "writegood-conf.el")
+
+; load cosmetic.el last so other packages are available
+(load-live-config-file "cosmetic.el")

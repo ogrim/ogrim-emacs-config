@@ -4,8 +4,10 @@
 
 ;; To use blackbored colour theme add the followign lines to your
 ;; config:
-;;(load-file (concat dotfiles-lib-dir "blackbored.el"))
+(load-file (concat dotfiles-lib-dir "blackbored.el"))
 ;;(color-theme-blackbored)
+
+(load-file (concat dotfiles-lib-dir "color-theme-tomorrow.el"))
 
 (load-file (concat dotfiles-lib-dir "zenburn-el/color-theme-zenburn.el"))
 (color-theme-zenburn)
@@ -24,3 +26,6 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+;;set colors of autocompletions cursor
+(setq popup-isearch-cursor-color zenburn-blue)
