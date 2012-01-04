@@ -1066,7 +1066,7 @@ the clocking selection, associated with the letter `d'."
 
       ;; Clock in at which position?
       (setq target-pos
-	    (if (and (eobp) (not (org-on-heading-p)))
+	    (if (and (eobp) (not (org-at-heading-p)))
 		(point-at-bol 0)
 	      (point)))
       (run-hooks 'org-clock-in-prepare-hook)
@@ -1115,7 +1115,7 @@ the clocking selection, associated with the letter `d'."
 	    (cond
 	     ((and org-clock-in-resume
 		   (looking-at
-		    (concat "^[ \t]* " org-clock-string
+		    (concat "^[ \t]*" org-clock-string
 			    " \\[\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}"
 			    " *\\sw+\.? +[012][0-9]:[0-5][0-9]\\)\\][ \t]*$")))
 	      (message "Matched %s" (match-string 1))
@@ -1247,7 +1247,7 @@ line and position cursor in that line."
       (goto-char beg)
       (when (and find-unclosed
 		 (re-search-forward
-		  (concat "^[ \t]* " org-clock-string
+		  (concat "^[ \t]*" org-clock-string
 			  " \\[\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}"
 			  " *\\sw+ +[012][0-9]:[0-5][0-9]\\)\\][ \t]*$")
 		  end t))
