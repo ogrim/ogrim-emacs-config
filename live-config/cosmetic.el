@@ -9,7 +9,7 @@
 
 (load-file (concat dotfiles-lib-dir "color-theme-tomorrow.el"))
 
-(load-file (concat dotfiles-lib-dir "zenburn-el/color-theme-zenburn.el"))
+(load-file (concat dotfiles-lib-dir "zenburn-emacs/color-theme-zenburn.el"))
 (color-theme-zenburn)
 
 ;;highlight current line
