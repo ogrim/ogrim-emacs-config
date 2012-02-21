@@ -45,6 +45,10 @@ Inherited tags will be considered."
          "pdflatex -interaction nonstopmode %b"
 	 "rm %b.bbl %b.blg"))
 
+(add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
+(setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)
+"integrals")
+
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (define-key org-mode-map (kbd "C-c c") 'reftex-citep)
