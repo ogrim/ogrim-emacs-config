@@ -29,3 +29,7 @@
 ;;To use: M-x align-cljlet
 (add-live-lib-path "align-cljlet")
 (require 'align-cljlet)
+
+(add-live-lib-path "midje-mode")
+(require 'midje-mode)
+(require 'clojure-jump-to-file)

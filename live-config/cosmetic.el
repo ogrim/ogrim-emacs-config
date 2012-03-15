@@ -11,6 +11,7 @@
 
 (load-file (concat dotfiles-lib-dir "zenburn-emacs/color-theme-zenburn.el"))
 (color-theme-zenburn)
+;(color-theme-tomorrow)
 
 ;;highlight current line
 (global-hl-line-mode 1)

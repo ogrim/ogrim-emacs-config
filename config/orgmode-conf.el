@@ -45,17 +45,15 @@ Inherited tags will be considered."
          "pdflatex -interaction nonstopmode %b"
 	 "rm %b.bbl %b.blg"))
 
-(add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
-(setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)
-"integrals")
-
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (define-key org-mode-map (kbd "C-c c") 'reftex-citep)
             (define-key org-mode-map (kbd "M-e") 'my-next-sentence)
             (define-key org-mode-map (kbd "M-a") 'my-last-sentence)
             (define-key org-mode-map (kbd "C-c w") 'week-number-current)
-	    (reftex-mode)))
+	    (reftex-mode)
+            (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
+            (setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist) "integrals")))
 
 (setq reftex-cite-format 'natbib)
 
@@ -69,3 +67,6 @@ Inherited tags will be considered."
 (setq org-tag-alist '(("telefon" . ?t) ("epost" . ?e) ("hjemma" . ?h) ("data" . ?d)))
 (setq org-indent-mode-turns-on-hiding-stars nil)
 (setq org-directory "~/org")
+
+;(add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
+;(setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist) "integrals")
