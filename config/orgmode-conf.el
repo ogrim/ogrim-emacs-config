@@ -45,15 +45,24 @@ Inherited tags will be considered."
          "pdflatex -interaction nonstopmode %b"
 	 "rm %b.bbl %b.blg"))
 
+;; (setq org-export-latex-listings t)
+;; (add-to-list 'org-export-latex-packages-alist '("" "listings"))
+;; (add-to-list 'org-export-latex-packages-alist '("" "color"))
+
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (define-key org-mode-map (kbd "C-c c") 'reftex-citep)
             (define-key org-mode-map (kbd "M-e") 'my-next-sentence)
             (define-key org-mode-map (kbd "M-a") 'my-last-sentence)
             (define-key org-mode-map (kbd "C-c w") 'week-number-current)
+            (define-key org-mode-map (kbd "C-M-k") 'sentence-kill-current)
 	    (reftex-mode)
             (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
-            (setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist) "integrals")))
+            (setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist) "integrals")
+            (make-local-variable 'sentence-highlight-mode)
+            (setq sentence-highlight-mode t)
+            (add-hook 'post-command-hook 'sentence-highlight-current)
+            (set (make-local-variable 'global-hl-line-mode) nil)))
 
 (setq reftex-cite-format 'natbib)
 
