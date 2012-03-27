@@ -9,8 +9,9 @@
 
 (load-file (concat dotfiles-lib-dir "color-theme-tomorrow.el"))
 
-(load-file (concat dotfiles-lib-dir "zenburn-el/color-theme-zenburn.el"))
+(load-file (concat dotfiles-lib-dir "zenburn-emacs/color-theme-zenburn.el"))
 (color-theme-zenburn)
+;(color-theme-tomorrow)
 
 ;;highlight current line
 (global-hl-line-mode 1)
@@ -29,3 +30,6 @@
 
 ;;set colors of autocompletions cursor
 (setq popup-isearch-cursor-color zenburn-blue)
+
+(set-default-font "Inconsolata-13")
+;(set-face-attribute 'default nil :height 100)

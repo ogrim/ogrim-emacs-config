@@ -24,3 +24,5 @@
 (global-set-key (kbd "<f9>") 'gtd)
 
 (global-set-key (kbd "C-x O") 'previous-multiframe-window)
+
+(global-set-key (kbd "M-T") (lambda () (interactive) (transpose-words -1)))

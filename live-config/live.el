@@ -30,14 +30,16 @@
 (load-live-config-file "lisps-conf.el")
 (load-live-config-file "highlight-flash-conf.el")
 (load-live-config-file "ido-conf.el")
-(load-live-config-file "clojure-conf.el")
 (load-live-config-file "slime-conf.el")
+(load-live-config-file "clojure-conf.el")
 (load-live-config-file "auto-complete-conf.el")
 (load-live-config-file "durendal-conf.el")
 (load-live-config-file "smex-conf.el")
 (load-live-config-file "yasnippet-conf.el")
 (load-live-config-file "orgmode-conf.el")
 (load-live-config-file "writegood-conf.el")
+(load-live-config-file "markdown-conf.el")
+(load-live-config-file "yaml-conf.el")
 
 ; load cosmetic.el last so other packages are available
 (load-live-config-file "cosmetic.el")

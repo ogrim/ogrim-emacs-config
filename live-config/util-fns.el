@@ -26,3 +26,44 @@
 (defun turn-on-linum ()
   (unless (minibufferp)
     (linum-mode 1)))
+
+;(setq sentence-end "[^.].[.?!]+\\([]\"')}]*\\|<[^>]+>\\)\\($\\| $\\|\t\\| \\)[ \t\n]*")
+(setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
+(setq sentence-end-double-space nil)
+
+;(setq sentence-color "#babaaa")
+(setq sentence-bg-color "#383838")
+(setq sentence-face (make-face 'sentence-face-background))
+;(set-face-foreground sentence-face sentence-color)
+(set-face-background sentence-face sentence-bg-color)
+
+(defun sentence-begin-pos ()
+  (save-excursion
+    (unless (= (point) (point-max)) (forward-char))
+    (backward-sentence) (point)
+    ;(if (= (char-after (- (point) 1)) 32) (point) (point))
+    ))
+
+(defun sentence-end-pos ()
+  (save-excursion
+    (unless (= (point) (point-max)) (forward-char))
+    (backward-sentence) (forward-sentence) (point)))
+
+(setq sentence-highlight-mode nil)
+
+(defun sentence-highlight-current (&rest ignore)
+  "Highlight current sentence."
+    (and sentence-highlight-mode (> (buffer-size) 0)
+    (progn
+      (and  (boundp 'sentence-extent)
+        sentence-extent
+        (move-overlay sentence-extent (sentence-begin-pos) (sentence-end-pos) (current-buffer))))))
+
+(setq sentence-extent (make-overlay 0 0))
+(overlay-put sentence-extent 'face sentence-face)
+
+(defun kill-current-sentence (&rest ignore)
+  "Kill current sentence."
+  (interactive)
+  (and sentence-highlight-mode (> (buffer-size) 0)
+       (kill-region (sentence-begin-pos) (+ (sentence-end-pos) 1))))
