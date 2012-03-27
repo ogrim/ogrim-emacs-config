@@ -15,9 +15,9 @@ Emacs in daemon mode is fast and awesome!
 
 ### Updating submodules
 
-* Checkout master branch from all submodules with `git submodule foreach git checkout master`
+* Check submodule status with `git submodule status`
 
-* Pull the latest changes from submodules' remote repository with `git submodule foreach git pull`. I pull as local changes are not made to the submodules.
+* If it has changed, pull the new commits with `git submodule update`
 
 
 ### What's inside?
@@ -30,3 +30,4 @@ This config includes an exciting cornucopia of Emacs goodies set up and ready to
 * Sexy Zenburn color theme
 * Fancy highlighting of sexps on eval, with nicer colors
 * REPL syntax highlighting
+* Submodules
