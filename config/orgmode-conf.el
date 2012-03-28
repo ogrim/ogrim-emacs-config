@@ -45,6 +45,9 @@ Inherited tags will be considered."
          "pdflatex -interaction nonstopmode %b"
 	 "rm %b.bbl %b.blg"))
 
+(add-to-list 'org-structure-template-alist
+             (quote ("C" "#+begin_comment\n?\n#+end_comment" "<!--\n?\n-->")))
+
 ;; (setq org-export-latex-listings t)
 ;; (add-to-list 'org-export-latex-packages-alist '("" "listings"))
 ;; (add-to-list 'org-export-latex-packages-alist '("" "color"))
