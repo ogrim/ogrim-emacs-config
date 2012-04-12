@@ -45,8 +45,7 @@ Inherited tags will be considered."
          "pdflatex -interaction nonstopmode %b"
 	 "rm %b.bbl %b.blg"))
 
-(add-to-list 'org-structure-template-alist
-             (quote ("C" "#+begin_comment\n?\n#+end_comment" "<!--\n?\n-->")))
+
 
 ;; (setq org-export-latex-listings t)
 ;; (add-to-list 'org-export-latex-packages-alist '("" "listings"))
@@ -67,6 +66,8 @@ Inherited tags will be considered."
             (setq sentence-highlight-mode t)
             (add-hook 'post-command-hook 'sentence-highlight-current)
             (set (make-local-variable 'global-hl-line-mode) nil)
+            (add-to-list 'org-structure-template-alist
+             (quote ("C" "#+begin_comment\n?\n#+end_comment" "<!--\n?\n-->")))
             ))
 
 (setq reftex-cite-format 'natbib)
