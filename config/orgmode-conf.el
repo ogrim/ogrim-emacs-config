@@ -1,6 +1,10 @@
+(prefer-coding-system 'utf-8)
+(set-charset-priority 'unicode)
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+
 (defun week-number (date)
- (org-days-to-iso-week
- (calendar-absolute-from-gregorian date)))
+  (org-days-to-iso-week
+   (calendar-absolute-from-gregorian date)))
 
 (defun week-number-current ()
   (interactive)
@@ -21,7 +25,7 @@ Inherited tags will be considered."
         nil
       subtree-end)))
 
-(setq org-agenda-files (quote ("~/org/planner.org")))
+(setq org-agenda-files (quote ("C:\\org\\work.org")))
 
 (setq org-agenda-custom-commands
       '(("w" agenda "" ((org-agenda-ndays 1)))
@@ -58,6 +62,9 @@ Inherited tags will be considered."
             ;(define-key org-mode-map (kbd "M-a") 'my-last-sentence)
             (define-key org-mode-map (kbd "C-c w") 'week-number-current)
             (define-key org-mode-map (kbd "C-M-k") 'kill-current-sentence)
+            (define-key org-mode-map (kbd "C-c h") 'timerange-insert-hours)
+            (define-key org-mode-map (kbd "C-c j") 'timerange-insert-hours-minus-lunch)
+            (define-key org-mode-map (kbd "C-c t") 'insert-timetable)
             (local-unset-key [(meta tab)])
 	    (reftex-mode)
             (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
@@ -74,7 +81,7 @@ Inherited tags will be considered."
 
 (defun gtd ()
   (interactive)
-  (find-file "~/org/planner.org")
+  (find-file "C:\\org\\work.org")
   (linum-mode 0))
 
 (setq org-log-done t)

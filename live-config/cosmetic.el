@@ -31,5 +31,7 @@
 ;;set colors of autocompletions cursor
 (setq popup-isearch-cursor-color zenburn-blue)
 
-(set-default-font "Inconsolata-13")
+;(set-default-font "Inconsolata-13")
+(set-default-font "Consolas-11")
+
 ;(set-face-attribute 'default nil :height 100)

@@ -1,6 +1,7 @@
 ;; Here is the root of your personal configs.
 
 (load-dotfile "config/orgmode-conf.el")
+(load-dotfile "config/windows.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

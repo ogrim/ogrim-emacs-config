@@ -40,6 +40,8 @@
 (load-live-config-file "writegood-conf.el")
 (load-live-config-file "markdown-conf.el")
 (load-live-config-file "yaml-conf.el")
+;(load-live-config-file "csharp-conf.el")
+(load-live-config-file "calfw-conf.el")
 
 ; load cosmetic.el last so other packages are available
 (load-live-config-file "cosmetic.el")

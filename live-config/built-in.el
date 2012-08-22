@@ -47,12 +47,40 @@
       display-time-day-and-date t
       display-time-24hr-format t)
 
+;; (setq locale-coding-system 'utf-8)
+;; (set-terminal-coding-system 'utf-8)
+;; (set-keyboard-coding-system 'utf-8)
+;; (set-selection-coding-system 'utf-8)
+;; (prefer-coding-system 'utf-8)
+;; (ansi-color-for-comint-mode-on)
+
+(setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
+(set-language-environment 'utf-8)
+;(set-keyboard-coding-system 'utf-8-mac) ; For old Carbon emacs on OS X only
 (setq locale-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-(ansi-color-for-comint-mode-on)
+
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+(defun reload-and-remove-dos ()
+  (interactive)
+  (revert-buffer t t)
+  (remove-dos-eol))
+
+;(global-set-key (kbd "<f12>") 'reload-and-remove-dos)
+
+(global-set-key (kbd "<f12>") (lambda ()
+                                (interactive)
+                                (revert-buffer t t)))
+
+
 
 (set-default 'indent-tabs-mode nil)
 (auto-compression-mode t)
