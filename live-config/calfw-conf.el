@@ -1,5 +1,5 @@
 (add-live-lib-path "emacs-calfw")
-(add-live-lib-path "calendar-norway.el")
+(add-live-lib-path "calendar-norway")
 (require 'calfw)
 (require 'calfw-org)
 
